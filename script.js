@@ -1,4 +1,20 @@
 $(function() {
+
+  $(".save-btn").click(function() {
+    $("html, body").scrollTop(0);
+    html2canvas(document.querySelector("#capture-container")).then(canvas => {
+    document.body.appendChild(canvas)
+    $("canvas").attr("id","target");
+    });
+  });
+
+  $(".convert-btn").click(function() {
+    var canvas = document.getElementById("target");
+    var dataURI = canvas.toDataURL();
+    var image = document.getElementById("output");
+    image.src = dataURI;
+  });
+
   var mode = "neutral";
   $(".y-btn").click(function() {
     mode = "y";
@@ -15,53 +31,39 @@ $(function() {
   var colorG = "rgba(76, 235, 163, 0.65)";
 
   $(".item").click(function() {
-    $(".item").css("background-color","transparent");
+    var index = $(".item").index(this);
+    $(".item").eq(index + 270).removeClass("clicked-y clicked-g");
     if ($(this).hasClass("clicked")) {
       $(this).removeClass("clicked clicked-y clicked-g");
     } else {
       if (mode == "y") {
-        $(this).addClass("clicked clicked-y") ;
+        $(this).addClass("clicked clicked-y");
+        $(".item").eq(index + 270).addClass("clicked-y");
       } else if (mode == "g") {
-        $(this).addClass("clicked clicked-g") ;
+        $(this).addClass("clicked clicked-g");
+        $(".item").eq(index + 270).addClass("clicked-g");
       }
     }
-    $(".clicked-y").css("background-color",colorY);
-    $(".clicked-g").css("background-color",colorG);
   });
 
   $(".all-y").click(function() {
-    $(".item").css("background-color","transparent");
-    $(this).parents(".item-container").find(".all").removeClass("clicked-all");
-    if ($(this).hasClass("clicked-all")) {
-      $(this).removeClass("clicked-all");
-      $(this).parents(".item-container").find(".item").removeClass("clicked clicked-y");
-    } else {
-      $(this).addClass("clicked-all");
-      $(this).parents(".item-container").find(".item").removeClass("clicked-g");
-      $(this).parents(".item-container").find(".item").addClass("clicked clicked-y");
-    }
-    $(".clicked-y").css("background-color",colorY);
-    $(".clicked-g").css("background-color",colorG);
+    var indexAll = $(this).parents(".item-container").index();
+    $(this).parents(".item-container").find(".item").removeClass("clicked-g");
+    $(this).parents(".item-container").find(".item").addClass("clicked clicked-y");
+    $(".item-container").eq(indexAll + 6).find(".item").removeClass("clicked-g");
+    $(".item-container").eq(indexAll + 6).find(".item").addClass("clicked-y");
   });
   $(".all-g").click(function() {
-    $(".item").css("background-color","transparent");
-    $(this).parents(".item-container").find(".all").removeClass("clicked-all");
-    if ($(this).hasClass("clicked-all")) {
-      $(this).removeClass("clicked-all");
-      $(this).parents(".item-container").find(".item").removeClass("clicked clicked-g");
-    } else {
-      $(this).addClass("clicked-all");
-      $(this).parents(".item-container").find(".item").removeClass("clicked-y");
-      $(this).parents(".item-container").find(".item").addClass("clicked clicked-g");
-    }
-    $(".clicked-y").css("background-color",colorY);
-    $(".clicked-g").css("background-color",colorG);
+    var indexAll = $(this).parents(".item-container").index();
+    $(this).parents(".item-container").find(".item").removeClass("clicked-y");
+    $(this).parents(".item-container").find(".item").addClass("clicked clicked-g");
+    $(".item-container").eq(indexAll + 6).find(".item").removeClass("clicked-y");
+    $(".item-container").eq(indexAll + 6).find(".item").addClass("clicked-g");
   });
   $(".all-d").click(function() {
-    $(".item").css("background-color","transparent");
+    var indexAll = $(this).parents(".item-container").index();
     $(this).parents(".item-container").find(".item").removeClass("clicked clicked-y clicked-g");
-    $(".clicked-y").css("background-color",colorY);
-    $(".clicked-g").css("background-color",colorG);
+    $(".item-container").eq(indexAll + 6).find(".item").removeClass("clicked-y clicked-g");
   });
 
   $(".top-btn").click(function() {
