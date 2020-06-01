@@ -16,7 +16,7 @@ $(function() {
   $("#for-android").click(function() {
     $("#for-android").toggleClass("fa-android-active");
     $(".save-btn").toggleClass("save-btn-android");
-    $("#capture-container").toggleClass("capture-android");
+    $("#capture").toggleClass("capture-android");
   });
 
   $(".convert-btn").click(function() {
