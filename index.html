@@ -17,27 +17,34 @@
 
         <div id="header-main">
           <div id="explanation">
-            <p><span>ステップ1</span>家具をタッチしてマークをつける</p>
+            <p><span>ステップ1</span>家具をタッチして色をつける</p>
             <p><span>ステップ2</span>変換ボタンを押して画像を保存！</p>
           </div>
           <div id="save-btn-container">
             <div id="for-android" class="fab fa-android"></div>
             <div class="btn save-btn" ontouchstart="">変更を保存</div>
           </div>
-          <div id="error" class="none" ontouchstart="">※変更を保存してください</div>
+          <div id="error" class="none">※変更を保存してください</div>
           <div class="btn convert-btn" ontouchstart="">画像に変換</div>
           <div id="atttention">変更を保存 を押して1秒くらい待ってから</div>
         </div>
 
+        <div id="capture-result">
+          <div id="sucsess">下の画像を長押しして保存してください</div>
+          <div id="android-attention">作成した画像が見切れてしまった場合は(特にアンドロイド端末)
+          <br>アンドロイドマークのボタンを押すことで対応できるかもしれません</div>
+          <img id="output" src="">
+        </div>
+
         <div id="selecter">
           <ul>
-            <li id="y">提供できる家具(譲)⇒ ピンク</li>
+            <li id="y">提供できる家具(出)⇒ ピンク</li>
             <li id="g">欲しい家具(求)⇒ グリーン</li>
           </ul>
-          <p>下のボタンからつけるマークを選んでください</p>
+          <p>下のボタンからつける色を選んでください</p>
         </div>
         <div id="switch">
-          <div class="btn y-btn" ontouchstart="">譲</div>
+          <div class="btn y-btn" ontouchstart="">出</div>
           <div class="btn g-btn" ontouchstart="">求</div>
         </div>
 
@@ -650,8 +657,631 @@
           <div class="btn top-btn" ontouchstart="">TOPに戻る</div>
         </div>
 
+        <div id="capture-container">
+          <div id="capture">
+            <div id="capture-title">シリーズ家具 テンプレート作成<span>@kamiy2743</span></div>
+            <div id="capture-main">
+              <div class="items">
+                <div id="container-1">
+                  <div id="container2">
+                    <div class="item-container" id="toy">
+                      <div class="title">TOYシリーズ</div>
+                      <div class="sub-title">TOYなウォールクロック</div>
+                      <table>
+                        <tr>
+                          <td class="td"><div class="item"><img src="fur/FtrBoyClockWall_Remake_0_0.png"><span>イエロー</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrBoyClockWall_Remake_1_0.png"><span>レッド</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrBoyClockWall_Remake_2_0.png"><span>グリーン</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrBoyClockWall_Remake_3_0.png"><span>ブルー</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrBoyClockWall_Remake_4_0.png"><span>ホワイト</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrBoyClockWall_Remake_5_0.png"><span>グレー</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrBoyClockWall_Remake_6_0.png"><span>パープル</span></div></td>
+                          <td class="td"></td>
+                        </tr>
+                      </table>
+                      <div class="sub-title">TOYなウォールクロック</div>
+                      <table>
+                        <tr>
+                          <td class="td"><div class="item"><img src="fur/FtrBoyAudio_Remake_0_0.png"><span>ホワイト</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrBoyAudio_Remake_1_0.png"><span>レッド</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrBoyAudio_Remake_2_0.png"><span>ブラック</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrBoyAudio_Remake_3_0.png"><span>アッシュ</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrBoyAudio_Remake_4_0.png"><span>グリーン</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrBoyAudio_Remake_5_0.png"><span>グレー</span></div></td>
+                          <td class="td"></td>
+                          <td class="td"></td>
+                        </tr>
+                      </table>
+                      <div class="sub-title">TOYなクロゼット</div>
+                      <table>
+                        <tr>
+                          <td class="td"><div class="item"><img src="fur/boycloset (1).png"><span>シルバー</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/boycloset (2).png"><span>イエロー</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/boycloset (3).png"><span>レッド</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/boycloset (4).png"><span>グリーン</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/boycloset (5).png"><span>ブルー</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/boycloset (6).png"><span>ブラック</span></div></td>
+                          <td class="td"></td>
+                          <td class="td"></td>
+                        </tr>
+                      </table>
+                      <div class="sub-title">TOYなコンテナ</div>
+                      <table>
+                        <tr>
+                          <td class="td"><div class="item"><img src="fur/FtrBoyBox_Remake_0_0.png"><span>グリーン</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrBoyBox_Remake_1_0.png"><span>レッド</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrBoyBox_Remake_2_0.png"><span>ブルー</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrBoyBox_Remake_3_0.png"><span>イエロー</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrBoyBox_Remake_4_0.png"><span>ライトブルー</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrBoyBox_Remake_5_0.png"><span>ホワイト</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrBoyBox_Remake_6_0.png"><span>ブラック</span></div></td>
+                          <td class="td"></td>
+                        </tr>
+                      </table>
+                      <div class="sub-title">TOYなスクリーン</div>
+                      <table>
+                        <tr>
+                          <td class="td"><div class="item"><img src="fur/FtrBoyScreen.png"><span></span></div></td>
+                          <td class="td"></td>
+                          <td class="td"></td>
+                          <td class="td"></td>
+                          <td class="td"></td>
+                          <td class="td"></td>
+                          <td class="td"></td>
+                          <td class="td"></td>
+                        </tr>
+                      </table>
+                      <div class="sub-title">TOYなチェア</div>
+                      <table>
+                        <tr>
+                          <td class="td"><div class="item"><img src="fur/boychair (1).png"><span>キャメル</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/boychair (2).png"><span>ブラウン</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/boychair (3).png"><span>レッド</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/boychair (4).png"><span>ブルー</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/boychair (5).png"><span>グリーン</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/boychair (6).png"><span>ホワイト</span></div></td>
+                          <td class="td"></td>
+                          <td class="td"></td>
+                        </tr>
+                      </table>
+                      <div class="sub-title">TOYなテーブル</div>
+                      <table>
+                        <tr>
+                          <td class="td"><div class="item"><img src="fur/boytable (1).png"><span>レッド</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/boytable (2).png"><span>ブルー</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/boytable (3).png"><span>グリーン</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/boytable (4).png"><span>黒×オレンジ</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/boytable (5).png"><span>黒×イエロー</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/boytable (6).png"><span>白×ブルー</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/boytable (7).png"><span>白×レッド</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/boytable (8).png"><span>ベースボール</span></div></td>
+                        </tr>
+                      </table>
+                      <div class="sub-title">TOYなフィギュア</div>
+                      <table>
+                        <tr>
+                          <td class="td"><div class="item"><img src="fur/FtrBoyFigure_Remake_0_0.png"><span>レッド</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrBoyFigure_Remake_1_0.png"><span>ブルー</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrBoyFigure_Remake_2_0.png"><span>グリーン</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrBoyFigure_Remake_3_0.png"><span>ピンク</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrBoyFigure_Remake_4_0.png"><span>ブラック</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrBoyFigure_Remake_5_0.png"><span>ゴールド</span></div></td>
+                          <td class="td"></td>
+                          <td class="td"></td>
+                        </tr>
+                      </table>
+                      <div class="sub-title">TOYなベッド</div>
+                      <table>
+                        <tr>
+                          <td class="td"><div class="item"><img src="fur/boybed (1).png"><span>レッド</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/boybed (2).png"><span>ブルー</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/boybed (3).png"><span>イエロー</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/boybed (4).png"><span>ピンク</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/boybed (5).png"><span>グリーン</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/boybed (6).png"><span>ホワイト</span></div></td>
+                          <td class="td"></td>
+                          <td class="td"></td>
+                        </tr>
+                      </table>
+                      <div class="sub-title">TOYなミラー</div>
+                      <table>
+                        <tr>
+                          <td class="td"><div class="item"><img src="fur/FtrBoyMirror_Remake_0_0.png"><span>ブラック</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrBoyMirror_Remake_1_0.png"><span>ホワイト</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrBoyMirror_Remake_2_0.png"><span>レッド</span></div></td>
+                          <td class="td"></td>
+                          <td class="td"></td>
+                          <td class="td"></td>
+                          <td class="td"></td>
+                          <td class="td"></td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="item-container" id="ant">
+                      <div class="title">アンティークシリーズ</div>
+                      <div class="item-container-2">
+                        <div>
+                          <div class="sub-title">アンティークなイス</div>
+                          <table>
+                            <tr>
+                              <td class="td"><div class="item"><img src="fur/FtrAntiqueChairS (1).png"><span>ブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrAntiqueChairS (2).png"><span>ナチュラル</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrAntiqueChairS (3).png"><span>ブラック</span></div></td>
+                            </tr>
+                          </table>
+                          <div class="sub-title">アンティークなコンソール</div>
+                          <table>
+                            <tr>
+                              <td class="td"><div class="item"><img src="fur/FtrAntiqueConsole (1).png"><span>ブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrAntiqueConsole (2).png"><span>ナチュラル</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrAntiqueConsole (3).png"><span>ブラック</span></div></td>
+                            </tr>
+                          </table>
+                          <div class="sub-title">アンティークなテーブル</div>
+                          <table>
+                            <tr>
+                              <td class="td"><div class="item"><img src="fur/FtrAntiqueTableL_Remake_0_0.png"><span>ブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrAntiqueTableL_Remake_1_0.png"><span>ナチュラル</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrAntiqueTableL_Remake_2_0.png"><span>ブラック</span></div></td>
+                            </tr>
+                          </table>
+                          <div class="sub-title">アンティークなでんわ</div>
+                          <table>
+                            <tr>
+                              <td class="td"><div class="item"><img src="fur/FtrAntiquePhoneW_Remake_0_0.png"><span>ブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrAntiquePhoneW_Remake_1_0.png"><span>ナチュラル</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrAntiquePhoneW_Remake_2_0.png"><span>ブラック</span></div></td>
+                            </tr>
+                          </table>
+                          <div class="sub-title">アンティークなとけい</div>
+                          <table>
+                            <tr>
+                              <td class="td"><div class="item"><img src="fur/FtrAntiqueClock (1).png"><span>ブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrAntiqueClock (2).png"><span>ナチュラル</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrAntiqueClock (3).png"><span>ブラック</span></div></td>
+                            </tr>
+                          </table>
+                        </div>
+                        <div>
+                          <div class="sub-title">アンティークなドレッサー</div>
+                          <table>
+                            <tr>
+                              <td class="td"><div class="item"><img src="fur/FtrAntiqueDresse (1).png"><span>ブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrAntiqueDresse (2).png"><span>ナチュラル</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrAntiqueDresse (3).png"><span>ブラック</span></div></td>
+                            </tr>
+                          </table>
+                          </table>
+                          <div class="sub-title">アンティークなビューロ</div>
+                          <table>
+                            <tr>
+                              <td class="td"><div class="item"><img src="fur/FtrAntiqueBureau (1).png"><span>ブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrAntiqueBureau (2).png"><span>ナチュラル</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrAntiqueBureau (3).png"><span>ブラック</span></div></td>
+                            </tr>
+                          </table>
+                          <div class="sub-title">アンティークなベッド</div>
+                          <table>
+                            <tr>
+                              <td class="td"><div class="item"><img src="fur/FtrAntiqueBedW (1).png"><span>ブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrAntiqueBedW (2).png"><span>ナチュラル</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrAntiqueBedW (3).png"><span>ブラック</span></div></td>
+                            </tr>
+                          </table>
+                          <div class="sub-title">アンティークなミニテーブル</div>
+                          <table>
+                            <tr>
+                              <td class="td"><div class="item"><img src="fur/FtrAntiqueTableS (1).png"><span>ブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrAntiqueTableS (2).png"><span>ナチュラル</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrAntiqueTableS (3).png"><span>ブラック</span></div></td>
+                            </tr>
+                          </table>
+                          <div class="sub-title">アンティークなワードローブ</div>
+                          <table>
+                            <tr>
+                              <td class="td"><div class="item"><img src="fur/FtrAntiqueChest (1).png"><span>ブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrAntiqueChest (2).png"><span>ナチュラル</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrAntiqueChest (3).png"><span>ブラック</span></div></td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item-container" id="ori">
+                      <div class="title">オリエンタルシリーズ</div>
+                      <div class="item-container-2">
+                        <div>
+                          <div class="sub-title">オリエンタルなかざりだな</div>
+                          <table>
+                            <tr>
+                              <td class="td"><div class="item"><img src="fur/FtrOrientalShelfWall_Remake_0_0.png"><span>レッド</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrOrientalShelfWall_Remake_1_0.png"><span>ブルー</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrOrientalShelfWall_Remake_2_0.png"><span>ブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrOrientalShelfWall_Remake_3_0.png"><span>ブラック</span></div></td>
+                            </tr>
+                          </table>
+                          <div class="sub-title">オリエンタルなスクリーン</div>
+                          <table>
+                            <tr>
+                              <td class="td"><div class="item"><img src="fur/FtrOrientalScreen (1).png"><span>レッド</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrOrientalScreen (2).png"><span>ブルー</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrOrientalScreen (3).png"><span>ブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrOrientalScreen (4).png"><span>ブラック</span></div></td>
+                            </tr>
+                          </table>
+                          <div class="sub-title">オリエンタルなチェスト</div>
+                          <table>
+                            <tr>
+                              <td class="td"><div class="item"><img src="fur/FtrOrientalChest (1).png"><span>レッド</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrOrientalChest (2).png"><span>ブルー</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrOrientalChest (3).png"><span>ブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrOrientalChest (4).png"><span>ブラック</span></div></td>
+                            </tr>
+                          </table>
+                        </div>
+                        <div>
+                          <div class="sub-title">オリエンタルなベッド</div>
+                          <table>
+                            <tr>
+                              <td class="td"><div class="item"><img src="fur/FtrOrientalBedW (1).png"><span>レッド</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrOrientalBedW (2).png"><span>ブルー</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrOrientalBedW (3).png"><span>ブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrOrientalBedW (4).png"><span>ブラック</span></div></td>
+                            </tr>
+                          </table>
+                          <div class="sub-title">オリエンタルなローテーブル</div>
+                          <table>
+                            <tr>
+                              <td class="td"><div class="item"><img src="fur/FtrOrientalTableM (1).png"><span>レッド</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrOrientalTableM (2).png"><span>ブルー</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrOrientalTableM (3).png"><span>ブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrOrientalTableM (4).png"><span>ブラック</span></div></td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="container-3">
+                    <div class="item-container" id="cute">
+                      <div class="title">キュートシリーズ</div>
+                      <div class="item-container-2">
+                        <div>
+                          <div class="sub-title">キュートなオーディオプレイヤー</div>
+                          <table>
+                            <tr>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteAudio_Remake_0_0.png"><span>ホワイト</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteAudio_Remake_1_0.png"><span>スカイブルー</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteAudio_Remake_2_0.png"><span>イエロー</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteAudio_Remake_3_0.png"><span>レッド</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteAudio_Remake_4_0.png"><span>ブルー</span></div></td>
+                            </tr>
+                          </table>
+                          <div class="sub-title">キュートなかべかけどけい</div>
+                          <table>
+                            <tr>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteClockW_Remake_0_0.png"><span>ホワイト</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteClockW_Remake_1_0.png"><span>スカイブルー</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteClockW_Remake_2_0.png"><span>イエロー</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteClockW_Remake_3_0.png"><span>レッド</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteClockW_Remake_4_0.png"><span>ブルー</span></div></td>
+                            </tr>
+                          </table>
+                          <div class="sub-title">キュートなクロゼット</div>
+                          <table>
+                            <tr>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteClosetLR (1).png"><span>ホワイト</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteClosetLR (2).png"><span>スカイブルー</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteClosetLR (3).png"><span>イエロー</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteClosetLR (4).png"><span>レッド</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteClosetLR (5).png"><span>ブルー</span></div></td>
+                            </tr>
+                          </table>
+                          <div class="sub-title">キュートなソファ</div>
+                          <table>
+                            <tr>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteChairL (1).png"><span>ホワイト</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteChairL (2).png"><span>スカイブルー</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteChairL (3).png"><span>イエロー</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteChairL (4).png"><span>レッド</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteChairL (5).png"><span>ブルー</span></div></td>
+                            </tr>
+                          </table>
+                          <div class="sub-title">キュートなチェア</div>
+                          <table>
+                            <tr>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteChairS (1).png"><span>ホワイト</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteChairS (2).png"><span>スカイブルー</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteChairS (3).png"><span>イエロー</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteChairS (4).png"><span>レッド</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteChairS (5).png"><span>ブルー</span></div></td>
+                            </tr>
+                          </table>
+                        </div>
+                        <div>
+                          <div class="sub-title">キュートなティーテーブル</div>
+                          <table>
+                            <tr>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteTableS (1).png"><span>ホワイト</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteTableS (2).png"><span>スカイブルー</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteTableS (3).png"><span>イエロー</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteTableS (4).png"><span>レッド</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteTableS (5).png"><span>ブルー</span></div></td>
+                            </tr>
+                          </table>
+                          <div class="sub-title">キュートなドレッサー</div>
+                          <table>
+                            <tr>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteDresser (1).png"><span>ホワイト</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteDresser (2).png"><span>スカイブルー</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteDresser (3).png"><span>イエロー</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteDresser (4).png"><span>レッド</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteDresser (5).png"><span>ブルー</span></div></td>
+                            </tr>
+                          </table>
+                          <div class="sub-title">キュートなフロアランプ</div>
+                          <table>
+                            <tr>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteLamp (1).png"><span>ホワイト</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteLamp (2).png"><span>スカイブルー</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteLamp (3).png"><span>イエロー</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteLamp (4).png"><span>レッド</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteLamp (5).png"><span>ブルー</span></div></td>
+                            </tr>
+                          </table>
+                          <div class="sub-title">キュートなベッド</div>
+                          <table>
+                            <tr>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteBedW (1).png"><span>ホワイト</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteBedW (2).png"><span>スカイブルー</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteBedW (3).png"><span>イエロー</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteBedW (4).png"><span>レッド</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteBedW (5).png"><span>ブルー</span></div></td>
+                            </tr>
+                          </table>
+                          <div class="sub-title">キュートなDIYテーブル</div>
+                          <table>
+                            <tr>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteWorkbench (1).png"><span>ホワイト</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteWorkbench (2).png"><span>スカイブルー</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteWorkbench (3).png"><span>イエロー</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteWorkbench (4).png"><span>レッド</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrCuteWorkbench (5).png"><span>ブルー</span></div></td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item-container" id="diner">
+                      <div class="title">ダイナーシリーズ</div>
+                      <div class="sub-title">ダイナーなイス</div>
+                      <table>
+                        <tr>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroChairS (1).png"><span>レッド</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroChairS (2).png"><span>ブルー</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroChairS (3).png"><span>イエロー</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroChairS (4).png"><span>エメラルド</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroChairS (5).png"><span>ピンク</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroChairS (6).png"><span>クリーム</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroChairS (7).png"><span>ブラック</span></div></td>
+                        </tr>
+                      </table>
+                      <div class="sub-title">ダイナーなカウンターチェア</div>
+                      <table>
+                        <tr>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroCounterchair (1).png"><span>レッド</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroCounterchair (2).png"><span>ブルー</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroCounterchair (3).png"><span>イエロー</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroCounterchair (4).png"><span>エメラルド</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroCounterchair (5).png"><span>ピンク</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroCounterchair (6).png"><span>クリーム</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroCounterchair (7).png"><span>ブラック</span></div></td>
+                        </tr>
+                      </table>
+                      <div class="sub-title">ダイナーなカウンターテーブル</div>
+                      <table>
+                        <tr>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroCounter (1).png"><span>レッド</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroCounter (2).png"><span>ブルー</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroCounter (3).png"><span>イエロー</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroCounter (4).png"><span>エメラルド</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroCounter (5).png"><span>ピンク</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroCounter (6).png"><span>クリーム</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroCounter (7).png"><span>ブラック</span></div></td>
+                        </tr>
+                      </table>
+                      <div class="sub-title">ダイナーなソファ</div>
+                      <table>
+                        <tr>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroChairL (1).png"><span>レッド</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroChairL (2).png"><span>ブルー</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroChairL (3).png"><span>イエロー</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroChairL (4).png"><span>エメラルド</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroChairL (5).png"><span>ピンク</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroChairL (6).png"><span>クリーム</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroChairL (7).png"><span>ブラック</span></div></td>
+                        </tr>
+                      </table>
+                      <div class="sub-title">ダイナーなダイニングテーブル</div>
+                      <table>
+                        <tr>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroTableM (1).png"><span>レッド</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroTableM (2).png"><span>ブルー</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroTableM (3).png"><span>イエロー</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroTableM (4).png"><span>エメラルド</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroTableM (5).png"><span>ピンク</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroTableM (6).png"><span>クリーム</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroTableM (7).png"><span>ブラック</span></div></td>
+                        </tr>
+                      </table>
+                      <div class="sub-title">ダイナーなネオンかんばん</div>
+                      <table>
+                        <tr>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroNeon (1).png"><span>レッド</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroNeon (2).png"><span>ブルー</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroNeon (3).png"><span>イエロー</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroNeon (4).png"><span>エメラルド</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroNeon (5).png"><span>ピンク</span></div></td>
+                        </tr>
+                      </table>
+                      <div class="sub-title">ダイナーなネオンクロック</div>
+                      <table>
+                        <tr>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroClock_Remake_0_0.png"><span>レッド</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroClock_Remake_1_0.png"><span>ブルー</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroClock_Remake_2_0.png"><span>イエロー</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroClock_Remake_3_0.png"><span>エメラルド</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroClock_Remake_4_0.png"><span>ピンク</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroClock_Remake_5_0.png"><span>クリーム</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroClock_Remake_6_0.png"><span>ブラック</span></div></td>
+                        </tr>
+                      </table>
+                      <div class="sub-title">ダイナーなミニテーブル</div>
+                      <table>
+                        <tr>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroTableS (1).png"><span>レッド</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroTableS (2).png"><span>ブルー</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroTableS (3).png"><span>イエロー</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroTableS (4).png"><span>エメラルド</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroTableS (5).png"><span>ピンク</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroTableS (6).png"><span>クリーム</span></div></td>
+                          <td class="td"><div class="item"><img src="fur/FtrAmeretroTableS (7).png"><span>ブラック</span></div></td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div id="guide">
+                      <div id="guide-y">出</div>
+                      <div id="guide-g">求</div>
+                    </div>
+                    <div class="item-container" id="ratan">
+                      <div class="title">ラタンシリーズ</div>
+                      <div class="item-container-2">
+                        <div>
+                          <div class="sub-title">ラタンのくずかご</div>
+                          <table>
+                            <tr>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanTrashbox (1).png"><span>ブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanTrashbox (2).png"><span>レッドブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanTrashbox (3).png"><span>ライトブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanTrashbox (4).png"><span>ホワイト</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanTrashbox (5).png"><span>グレー</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanTrashbox (6).png"><span>ブラック</span></div></td>
+                            </tr>
+                          </table>
+                          <div class="sub-title">ラタンのクロゼット</div>
+                          <table>
+                            <tr>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanClosetLR (1).png"><span>ブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanClosetLR (2).png"><span>レッドブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanClosetLR (3).png"><span>ライトブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanClosetLR (4).png"><span>ホワイト</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanClosetLR (5).png"><span>グレー</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanClosetLR (6).png"><span>ブラック</span></div></td>
+                            </tr>
+                          </table>
+                          <div class="sub-title">ラタンのサイドテーブル</div>
+                          <table>
+                            <tr>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanTableS (1).png"><span>ブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanTableS (2).png"><span>レッドブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanTableS (3).png"><span>ライトブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanTableS (4).png"><span>ホワイト</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanTableS (5).png"><span>グレー</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanTableS (6).png"><span>ブラック</span></div></td>
+                            </tr>
+                          </table>
+                          <div class="sub-title">ラタンのスツール</div>
+                          <table>
+                            <tr>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanStool (1).png"><span>ブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanStool (2).png"><span>レッドブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanStool (3).png"><span>ライトブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanStool (4).png"><span>ホワイト</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanStool (5).png"><span>グレー</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanStool (6).png"><span>ブラック</span></div></td>
+                            </tr>
+                          </table>
+                          <div class="sub-title">ラタンのソファ</div>
+                          <table>
+                            <tr>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanChairS (1).png"><span>ブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanChairS (2).png"><span>レッドブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanChairS (3).png"><span>ライトブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanChairS (4).png"><span>ホワイト</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanChairS (5).png"><span>グレー</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanChairS (6).png"><span>ブラック</span></div></td>
+                            </tr>
+                          </table>
+                        </div>
+                        <div>
+                          <div class="sub-title">ラタンのタオルバケット</div>
+                          <table>
+                            <tr>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanBasket_Remake_0_0.png"><span>ブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanBasket_Remake_1_0.png"><span>レッドブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanBasket_Remake_2_0.png"><span>ライトブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanBasket_Remake_3_0.png"><span>ホワイト</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanBasket_Remake_4_0.png"><span>グレー</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanBasket_Remake_5_0.png"><span>ブラック</span></div></td>
+                            </tr>
+                          </table>
+                          <div class="sub-title">ラタンのテーブルランプ</div>
+                          <table>
+                            <tr>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanLamp_Remake_0_0.png"><span>ブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanLamp_Remake_1_0.png"><span>レッドブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanLamp_Remake_2_0.png"><span>ライトブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanLamp_Remake_3_0.png"><span>ホワイト</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanLamp_Remake_4_0.png"><span>グレー</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanLamp_Remake_5_0.png"><span>ブラック</span></div></td>
+                            </tr>
+                          </table>
+                          <div class="sub-title">ラタンのドレッサー</div>
+                          <table>
+                            <tr>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanDresser (1).png"><span>ブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanDresser (2).png"><span>レッドブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanDresser (3).png"><span>ライトブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanDresser (4).png"><span>ホワイト</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanDresser (5).png"><span>グレー</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanDresser (6).png"><span>ブラック</span></div></td>
+                            </tr>
+                          </table>
+                          <div class="sub-title">ラタンのベッド</div>
+                          <table>
+                            <tr>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanBedW (1).png"><span>ブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanBedW (2).png"><span>レッドブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanBedW (3).png"><span>ライトブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanBedW (4).png"><span>ホワイト</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanBedW (5).png"><span>グレー</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanBedW (6).png"><span>ブラック</span></div></td>
+                            </tr>
+                          </table>
+                          <div class="sub-title">ラタンのローテーブル</div>
+                          <table>
+                            <tr>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanTableM (1).png"><span>ブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanTableM (2).png"><span>レッドブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanTableM (3).png"><span>ライトブラウン</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanTableM (4).png"><span>ホワイト</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanTableM (5).png"><span>グレー</span></div></td>
+                              <td class="td"><div class="item"><img src="fur/FtrRattanTableM (6).png"><span>ブラック</span></div></td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <script src="script.js"></script>
+      <script src="canvas.js"></script>
     </body>
 </html>
