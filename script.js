@@ -2,13 +2,29 @@ $(function() {
 
   $(".save-btn").click(function() {
     $("html, body").scrollTop(0);
+    $("canvas").remove();
+    $("#capture-container").removeClass("none");
     html2canvas(document.querySelector("#capture-container")).then(canvas => {
     document.body.appendChild(canvas)
     $("canvas").attr("id","target");
+    $("canvas").addClass("none");
+    $("#capture-container").addClass("none");
     });
+    $("#error").addClass("none");
+    $(".save-btn").removeClass("not-saved");
+  });
+  $("#for-android").click(function() {
+    $("#for-android").toggleClass("fa-android-active");
+    $(".save-btn").toggleClass("save-btn-android");
+    $("#capture-container").toggleClass("capture-android");
   });
 
   $(".convert-btn").click(function() {
+    if ($(".save-btn").hasClass("not-saved")) {
+      $("#error").removeClass("none");
+    } else {
+      $("#capture-result").removeClass("none");
+    }
     var canvas = document.getElementById("target");
     var dataURI = canvas.toDataURL();
     var image = document.getElementById("output");
@@ -31,6 +47,7 @@ $(function() {
   var colorG = "rgba(76, 235, 163, 0.65)";
 
   $(".item").click(function() {
+    $("#error").removeClass("none");
     var index = $(".item").index(this);
     $(".item").eq(index + 270).removeClass("clicked-y clicked-g");
     if ($(this).hasClass("clicked")) {
@@ -47,6 +64,7 @@ $(function() {
   });
 
   $(".all-y").click(function() {
+    $("#error").removeClass("none");
     var indexAll = $(this).parents(".item-container").index();
     $(this).parents(".item-container").find(".item").removeClass("clicked-g");
     $(this).parents(".item-container").find(".item").addClass("clicked clicked-y");
@@ -54,6 +72,7 @@ $(function() {
     $(".item-container").eq(indexAll + 6).find(".item").addClass("clicked-y");
   });
   $(".all-g").click(function() {
+    $("#error").removeClass("none");
     var indexAll = $(this).parents(".item-container").index();
     $(this).parents(".item-container").find(".item").removeClass("clicked-y");
     $(this).parents(".item-container").find(".item").addClass("clicked clicked-g");
@@ -61,6 +80,7 @@ $(function() {
     $(".item-container").eq(indexAll + 6).find(".item").addClass("clicked-g");
   });
   $(".all-d").click(function() {
+    $("#error").removeClass("none");
     var indexAll = $(this).parents(".item-container").index();
     $(this).parents(".item-container").find(".item").removeClass("clicked clicked-y clicked-g");
     $(".item-container").eq(indexAll + 6).find(".item").removeClass("clicked-y clicked-g");
