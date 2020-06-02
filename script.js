@@ -50,19 +50,19 @@ $(function() {
   $(".item").click(function() {
     $("#error").removeClass("none");
     var index = $(".item").index(this);
-    $(".item").eq(index + 270).removeClass("clicked-o clicked-y clicked-g");
+    $(".item").eq(index + 271).removeClass("clicked-o clicked-y clicked-g");
     if ($(this).hasClass("clicked")) {
       $(this).removeClass("clicked clicked-o clicked-y clicked-g");
     } else {
       if (mode == "y") {
         $(this).addClass("clicked clicked-y");
-        $(".item").eq(index + 270).addClass("clicked-y");
+        $(".item").eq(index + 271).addClass("clicked-y");
       } else if (mode == "g") {
         $(this).addClass("clicked clicked-g");
-        $(".item").eq(index + 270).addClass("clicked-g");
+        $(".item").eq(index + 271).addClass("clicked-g");
       } else {
         $(this).addClass("clicked clicked-o");
-        $(".item").eq(index + 270).addClass("clicked-o");
+        $(".item").eq(index + 271).addClass("clicked-o");
       }
     }
   });
