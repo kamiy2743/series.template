@@ -42,13 +42,15 @@
 
         <div id="selecter">
           <ul>
-            <li id="y">提供できる家具(出)⇒ ピンク</li>
+            <li id="o">カタログ登録済み⇒ オレンジ</li>
+            <li id="y">現物所持の家具⇒ ピンク</li>
             <li id="g">欲しい家具(求)⇒ グリーン</li>
           </ul>
           <p>下のボタンからつける色を選んでください</p>
         </div>
         <div id="switch">
-          <div class="btn y-btn" ontouchstart="">出</div>
+          <div class="btn o-btn" ontouchstart="">登録済み</div>
+          <div class="btn y-btn" ontouchstart="">現物所持</div>
           <div class="btn g-btn" ontouchstart="">求</div>
         </div>
 
@@ -57,7 +59,8 @@
             <div class="item-container">
               <table border="1">
                 <tr>
-                  <th class="title" colspan="5">TOYシリーズ</th>
+                  <th class="title" colspan="4">TOYシリーズ</th>
+                  <th><div class="all-o all">全選択</div></th>
                   <th><div class="all-y all">全選択</div></th>
                   <th><div class="all-g all">全選択</div></th>
                   <th><div class="all-d all">全て消す</div></th>
@@ -176,7 +179,8 @@
             <div class="item-container">
               <table border="1">
                 <tr>
-                  <th class="title" colspan="5">アンティークシリーズ</th>
+                  <th class="title" colspan="4">アンティークシリーズ</th>
+                  <th><div class="all-o all">全選択</div></th>
                   <th><div class="all-y all">全選択</div></th>
                   <th><div class="all-g all">全選択</div></th>
                   <th><div class="all-d all">全て消す</div></th>
@@ -286,7 +290,8 @@
             <div class="item-container">
               <table border="1">
                 <tr>
-                  <th class="title" colspan="5">オリエンタルシリーズ</th>
+                  <th class="title" colspan="4">オリエンタルシリーズ</th>
+                  <th><div class="all-o all">全選択</div></th>
                   <th><div class="all-y all">全選択</div></th>
                   <th><div class="all-g all">全選択</div></th>
                   <th><div class="all-d all">全て消す</div></th>
@@ -346,7 +351,8 @@
             <div class="item-container">
               <table border="1">
                 <tr>
-                  <th class="title" colspan="5">キュートシリーズ</th>
+                  <th class="title" colspan="4">キュートシリーズ</th>
+                  <th><div class="all-o all">全選択</div></th>
                   <th><div class="all-y all">全選択</div></th>
                   <th><div class="all-g all">全選択</div></th>
                   <th><div class="all-d all">全て消す</div></th>
@@ -456,7 +462,8 @@
             <div class="item-container">
               <table border="1">
                 <tr>
-                  <th class="title" colspan="5">ダイナーシリーズ</th>
+                  <th class="title" colspan="4">ダイナーシリーズ</th>
+                  <th><div class="all-o all">全選択</div></th>
                   <th><div class="all-y all">全選択</div></th>
                   <th><div class="all-g all">全選択</div></th>
                   <th><div class="all-d all">全て消す</div></th>
@@ -546,7 +553,8 @@
             <div class="item-container">
               <table border="1">
                 <tr>
-                  <th class="title" colspan="5">ラタンシリーズ</th>
+                  <th class="title" colspan="4">ラタンシリーズ</th>
+                  <th><div class="all-o all">全選択</div></th>
                   <th><div class="all-y all">全選択</div></th>
                   <th><div class="all-g all">全選択</div></th>
                   <th><div class="all-d all">全て消す</div></th>
@@ -661,12 +669,13 @@
           <div class="btn top-btn" ontouchstart="">TOPに戻る</div>
         </div>
 
-        <div id="capture-container" class="none">
+        <div id="capture-container" class="non">
           <div id="capture">
             <div id="capture-title">シリーズ家具 テンプレート作成<span>@kamiy2743</span></div>
             <div id="capture-main">
               <div id="guide">
-                <div id="guide-y"></div><span id="guide-y-text">＝出</span>
+                <div id="guide-o"></div><span id="guide-o-text">＝カタログ登録済み</span>
+                <div id="guide-y"></div><span id="guide-y-text">＝現物所持</span>
                 <div id="guide-g"></div><span id="guide-g-text">＝求</span>
               </div>
               <div class="items">
