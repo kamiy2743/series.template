@@ -32,26 +32,27 @@ $(function() {
   });
 
   var mode = "neutral";
+  $(".o-btn").click(function() {
+    mode = "o";
+    $(".o-btn,.y-btn,.g-btn").css({"transform":"scale(1)","opacity":"0.6"});
+    $(".o-btn").css({"transform":"scale(1.15)","opacity":"1"});
+  });
   $(".y-btn").click(function() {
     mode = "y";
-    $(".y-btn,.g-btn").css({"transform":"scale(1)","opacity":"0.6"});
+    $(".o-btn,.y-btn,.g-btn").css({"transform":"scale(1)","opacity":"0.6"});
     $(".y-btn").css({"transform":"scale(1.15)","opacity":"1"});
   });
   $(".g-btn").click(function() {
     mode = "g";
-    $(".y-btn,.g-btn").css({"transform":"scale(1)","opacity":"0.6"});
+    $(".o-btn,.y-btn,.g-btn").css({"transform":"scale(1)","opacity":"0.6"});
     $(".g-btn").css({"transform":"scale(1.15)","opacity":"1"});
   });
-
-  var colorY = "rgba(249, 136, 204, 0.52)";
-  var colorG = "rgba(76, 235, 163, 0.65)";
-
   $(".item").click(function() {
     $("#error").removeClass("none");
     var index = $(".item").index(this);
-    $(".item").eq(index + 270).removeClass("clicked-y clicked-g");
+    $(".item").eq(index + 270).removeClass("clicked-o clicked-y clicked-g");
     if ($(this).hasClass("clicked")) {
-      $(this).removeClass("clicked clicked-y clicked-g");
+      $(this).removeClass("clicked clicked-o clicked-y clicked-g");
     } else {
       if (mode == "y") {
         $(this).addClass("clicked clicked-y");
@@ -59,31 +60,42 @@ $(function() {
       } else if (mode == "g") {
         $(this).addClass("clicked clicked-g");
         $(".item").eq(index + 270).addClass("clicked-g");
+      } else {
+        $(this).addClass("clicked clicked-o");
+        $(".item").eq(index + 270).addClass("clicked-o");
       }
     }
   });
 
+  $(".all-o").click(function() {
+    $("#error").removeClass("none");
+    var indexAll = $(this).parents(".item-container").index();
+    $(this).parents(".item-container").find(".item").removeClass("clicked-y clicked-g");
+    $(this).parents(".item-container").find(".item").addClass("clicked clicked-o");
+    $(".item-container").eq(indexAll + 6).find(".item").removeClass("clicked-y clicked-g");
+    $(".item-container").eq(indexAll + 6).find(".item").addClass("clicked-o");
+  });
   $(".all-y").click(function() {
     $("#error").removeClass("none");
     var indexAll = $(this).parents(".item-container").index();
-    $(this).parents(".item-container").find(".item").removeClass("clicked-g");
+    $(this).parents(".item-container").find(".item").removeClass("clicked-o clicked-g");
     $(this).parents(".item-container").find(".item").addClass("clicked clicked-y");
-    $(".item-container").eq(indexAll + 6).find(".item").removeClass("clicked-g");
+    $(".item-container").eq(indexAll + 6).find(".item").removeClass("clicked-o clicked-g");
     $(".item-container").eq(indexAll + 6).find(".item").addClass("clicked-y");
   });
   $(".all-g").click(function() {
     $("#error").removeClass("none");
     var indexAll = $(this).parents(".item-container").index();
-    $(this).parents(".item-container").find(".item").removeClass("clicked-y");
+    $(this).parents(".item-container").find(".item").removeClass("clicked-o clicked-y");
     $(this).parents(".item-container").find(".item").addClass("clicked clicked-g");
-    $(".item-container").eq(indexAll + 6).find(".item").removeClass("clicked-y");
+    $(".item-container").eq(indexAll + 6).find(".item").removeClass("clicked-o clicked-y");
     $(".item-container").eq(indexAll + 6).find(".item").addClass("clicked-g");
   });
   $(".all-d").click(function() {
     $("#error").removeClass("none");
     var indexAll = $(this).parents(".item-container").index();
-    $(this).parents(".item-container").find(".item").removeClass("clicked clicked-y clicked-g");
-    $(".item-container").eq(indexAll + 6).find(".item").removeClass("clicked-y clicked-g");
+    $(this).parents(".item-container").find(".item").removeClass("clicked clicked-o clicked-y clicked-g");
+    $(".item-container").eq(indexAll + 6).find(".item").removeClass("clicked-o clicked-y clicked-g");
   });
 
   $(".top-btn").click(function() {
