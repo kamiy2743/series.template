@@ -1,17 +1,8 @@
 $(function() {
-  for (var i = 0; i <= 541; i++) {
-    var jsonObj = localStorage.getItem(`Key${i}`);
-    var jsObj = JSON.parse(jsonObj);
-    console.log(jsObj);
-    $(".item").eq(jsObj.index).attr("class", jsObj.class);
-  }
+  
 
   $(".save-btn").click(function() {
-    for (var i = 0; i <= 541; i++) {
-      var obj = {index: i, class: $(".item").eq(i).attr("class")}
-      console.log(obj);
-      localStorage.setItem(`Key${i}`, JSON.stringify(obj));
-    }
+    
     $("html, body").scrollTop(0);
     $("canvas").remove();
     $("#capture-container").removeClass("none");
