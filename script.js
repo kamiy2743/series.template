@@ -1,8 +1,19 @@
 $(function() {
-  
+  for (var i = 0; i <= 541; i++) {
+    var jsonObj = localStorage.getItem(`Key${i}`);
+    var jsObj = JSON.parse(jsonObj);
+    console.log(jsObj);
+    if (jsObj != null) {
+      $(".item").eq(jsObj.index).attr("class", jsObj.class);
+    }
+  }
 
   $(".save-btn").click(function() {
-    
+    for (var i = 0; i <= 541; i++) {
+      var obj = {index: i, class: $(".item").eq(i).attr("class")}
+      console.log(obj);
+      localStorage.setItem(`Key${i}`, JSON.stringify(obj));
+    }
     $("html, body").scrollTop(0);
     $("canvas").remove();
     $("#capture-container").removeClass("none");
@@ -16,6 +27,7 @@ $(function() {
     $(".save-btn").removeClass("not-saved");
   });
   $("#for-android").click(function() {
+    localStorage.clear();
     $("#for-android").toggleClass("fa-android-active");
     $(".save-btn").toggleClass("save-btn-android");
     $("#capture").toggleClass("capture-android");
